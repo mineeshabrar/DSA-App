@@ -1,11 +1,13 @@
 import './App.css';
-import { Auth } from './components/auth';
+import { SignIn } from "./components/signin"
+import { SignOut } from "./components/signout"
 
 function App() {
   return (
     <div className="App">
       DSA-App
-      <Auth/>
+      <SignIn/>
+      <SignOut/>
     </div>
   );
 }
