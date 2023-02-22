@@ -1,18 +1,14 @@
-import React from 'react'
-import Login from './components/Login'
-import Register from './components/Register';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import { SignIn } from "./components/signin"
+import { SignOut } from "./components/signout"
+
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Login/>} />
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/register" element={<Register/>}/>
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      DSA-App
+      <SignIn/>
+      <SignOut/>
+    </div>
   );
 }
 
