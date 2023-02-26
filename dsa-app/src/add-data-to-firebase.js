@@ -36,7 +36,7 @@ var events =
   }
 ]
 
-var student =
+var students =
 [
   {
     "sid": 19101,
@@ -59,8 +59,8 @@ var student =
 
 const  db = getFirestore(app);
 
-student.forEach(async function(obj) {
-  await setDoc(doc(db, "student", String(obj.sid)), obj);  
+students.forEach(async function(obj) {
+  await setDoc(doc(db, "students", String(obj.sid)), obj);  
 });
 
 clubs.forEach(async function(obj) {

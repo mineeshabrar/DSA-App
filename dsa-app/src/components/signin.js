@@ -2,10 +2,10 @@ import { auth } from "../config/firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth"
 
 export const SignIn = () => {
-    const signInWithGoogle = async () => {
+    const authenticateFirebase = async () => {
         try {
             await signInWithPopup(auth, new GoogleAuthProvider());
-            console.log(auth.currentUser.email);
+            console.log("User authenticated: " + auth.currentUser.email);
         } catch (err) {
             console.error(err);
         }
@@ -13,7 +13,7 @@ export const SignIn = () => {
 
     return (
         <div>
-            <button onClick={ signInWithGoogle }> Sign In With Google </button>
+            <button onClick={ authenticateFirebase }> Sign In With Google </button>
         </div>
     );
 };

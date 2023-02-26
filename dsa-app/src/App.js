@@ -1,6 +1,7 @@
 import './App.css';
 import { SignIn } from "./components/signin"
 import { SignOut } from "./components/signout"
+import { Dashboard } from './components/dashboard';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       DSA-App
       <SignIn/>
       <SignOut/>
+      <Dashboard/>
     </div>
   );
 }
